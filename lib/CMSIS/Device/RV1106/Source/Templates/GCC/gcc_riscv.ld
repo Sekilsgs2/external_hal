@@ -2,13 +2,13 @@ OUTPUT_ARCH( "riscv" )
 ENTRY(_start)
 
 MEMORY {
-    DRAM (rwx) : ORIGIN = 0x40000, LENGTH = 0x40000
+    DRAM (rwx) : ORIGIN = 0xFF6C0000, LENGTH = 256K
 }
 
-STACK_SIZE = 0x800;
+STACK_SIZE = 2K;
 
-GP_SIZE = 0x400;
-CL_SIZE = 0x20;
+GP_SIZE = 1K;
+CL_SIZE = 32;
 
 SECTIONS {
     .text : {
